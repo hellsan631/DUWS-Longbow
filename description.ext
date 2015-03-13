@@ -1,0 +1,59 @@
+OnLoadMission = "A dynamically generated campaign where you earn resources, execute missions and lead the BLUFOR to victory!";
+onLoadName = "DUWS Longbow 1.0";
+dev = "dev";
+author = "Kibot / BigShot / rlex / Emton";
+overviewText = "A dynamically generated campaign featuring the AH-64D Apache Longbow by Nodunit and Franze. Earn resources, execute missions and lead the BLUFOR forces to eradicate the OPFOR and win the war. Play however you want: Be a spec ops, a squad leader or command the whole army, the choice is yours.";
+overviewPicture = "DUWSLongbowLogo.jpg";
+LoadScreen = "DUWSLongbowLogo.jpg";
+respawnDialog = 0;
+
+class Header
+{
+ gameType = COOP;            //DM, Team, Coop, ...
+ minPlayers = 1;             //min # of players the mission supports
+ maxPlayers = 12;            //Max # of players the mission supports
+};
+
+respawn = 3;
+respawnDelay = 20;
+disabledAI = 1;
+allowFunctionsLog = 0;
+
+#include "debriefing.hpp"
+#include "dialog\defines.hpp"
+#include "dialog\startup\startup.hpp"
+#include "dialog\squad\squadmng.hpp"
+#include "dialog\squad\rename\renamesquad.hpp"
+#include "dialog\request.hpp"
+#include "dialog\request_fob.hpp"
+#include "dialog\fob\fobmanager.hpp"
+#include "dialog\info\info.hpp"
+#include "dialog\info\reset\reset.hpp"
+#include "locations.hpp"
+#include "support\support.hpp"
+#include "hints.hpp"
+#include "dialog\startup\hq_placement\placement.hpp"
+#include "sounds\sounds.hpp"
+#include "dialog\operative\identities.hpp"
+#include "dialog\operative\operative.hpp"
+#include "params.hpp"
+#include "duws_revive\gui\duws_revive.hpp"
+#include "missions\missions\roulette\bomb\keypad_defuse\explosivePad.hpp"
+#include "pxs_satcom_a3\init_interface.hpp"
+#include "CHVD\dialog.hpp"
+#include "VAS\menu.hpp"
+#include "R3F_LOG\desc_include.h"
+
+class CfgFunctions
+{
+	#include "VAS\cfgfunctions.hpp"
+	#include "CHVD\CfgFunctions.hpp"
+	// #include "ais_injury\cfgFunctionsAIS.hpp" //Disabled AIS Injury, was causing bugs when the Longbow chopper got shot down 
+	#include "EPD\EPDcfgFunctions.hpp"
+};
+
+// VAS INIT END --
+
+class RscTitles {
+	// #include "ais_injury\dialogs\rscTitlesAIS.hpp" //Disabled AIS Injury
+};
