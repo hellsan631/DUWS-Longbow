@@ -29,7 +29,7 @@ class Mission
 	randomSeed=16091530;
 	class Intel
 	{
-		briefingName="[SP]DUWS Longbow 1.0";
+		briefingName="[SP]DUWS Longbow 1.1";
 		overviewText="Fly the Apache Longbow in a dynamically generated campaign on any map.";
 		startWeather=0;
 		startWind=0;

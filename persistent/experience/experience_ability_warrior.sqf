@@ -1,8 +1,8 @@
 // Cooldown les variables
 _cooldown = 600;
-_ability_name = "Veteran instinct";
+_ability_name = "Veteran Instinct";
 _varname = "skill_activate_veteran";
-_radio = "DELTA";
+_radio = "ECHO";
 
 // Defini la variable qui lance l'action
 call compile format ["%1 = false",_varname];
@@ -30,7 +30,7 @@ deleteVehicle _trg;
     
             // Crée le marqueur de detection
             _trgplayer = createTrigger["EmptyDetector",[0,0,0]];
-            _trgplayer setTriggerArea[50,50,0,false];
+            _trgplayer setTriggerArea[100,100,0,false];
             _trgplayer setTriggerActivation["EAST","PRESENT",true];
             _trgplayer setTriggerStatements["this", "", ""];
             sleep 1;
@@ -41,11 +41,11 @@ deleteVehicle _trg;
                  _ennemies = list _trgplayer;
                  
                  if (count _ennemies>0) then {
-                    titleText ["There's enemies around here...", "PLAIN DOWN"];
+                    titleText ["Be careful, there's OPFOR near...", "PLAIN DOWN"];
                     }
                     else
                     {
-                    titleText ["Clear so far...", "PLAIN DOWN"];
+                    titleText ["Seems clear for now...", "PLAIN DOWN"];
                     };
                     
                   _duration = _duration - 1;

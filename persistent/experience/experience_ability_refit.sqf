@@ -1,8 +1,8 @@
 // Cooldown les variables
-_cooldown = 3600;
+_cooldown = 2400;
 _ability_name = "Field Repair";
 _varname = "skill_activate_fieldrefit";
-_radio = "ECHO";
+_radio = "FOXTROT";
 
 // Defini la variable qui lance l'action
 call compile format ["%1 = false",_varname];

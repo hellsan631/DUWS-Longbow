@@ -26,7 +26,7 @@ diag_log format ["------------------ DUWS Unofficial START ----v1.20 based on Mo
         if (isNil "blufor_ai_skill") then {blufor_ai_skill = [0.9,1.0];};    // set the skill range of friendly AI, from 0 to 1 (0 being completely dumb)
         hq_manually_placed = false;  // you must specify if you have manually placed HQ or not. false = HQ is randomly placed -- true = you have manually placed the HQ
         zones_manually_placed = false;  // you must specify if you have manually placed the zones or not. false = zones are randomly generated -- true = you have manually placed the zones
-		zones_max_dist_from_hq = 7500;
+		zones_max_dist_from_hq = 50000;
 		dynamic_weather_enable = true;
         manually_chosen = false;
 		Attack = false;
@@ -220,7 +220,7 @@ if (!isMultiplayer) then {
 };
 
 
-Warcom_Limiter_Param = paramsArray select 6; //disbale/enable warcomm AI limiter for improved fps
+Warcom_Limiter_Param = paramsArray select 6; //disable/enable warcomm AI limiter for improved fps
 // IF MP
 if (isMultiplayer) then {
 

@@ -47,7 +47,6 @@ _hq disableAI "TARGET";
 _hq disableAI "FSM";
 _hq disableAI "AUTOTARGET";
 _hq disableAI "MOVE";
-_hq disableAI "PRONE";
 //Disable ASR for officer
 _hq setVariable ["asr_ai_exclude", true];
 //Disable VCOM for officer

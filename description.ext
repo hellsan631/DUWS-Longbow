@@ -1,5 +1,5 @@
 OnLoadMission = "A dynamically generated campaign where you earn resources, execute missions and lead the BLUFOR to victory!";
-onLoadName = "DUWS Longbow 1.0";
+onLoadName = "DUWS Longbow 1.1";
 dev = "dev";
 author = "Kibot / BigShot / rlex / Emton";
 overviewText = "A dynamically generated campaign featuring the AH-64D Apache Longbow by Nodunit and Franze. Earn resources, execute missions and lead the BLUFOR forces to eradicate the OPFOR and win the war. Play however you want: Be a spec ops, a squad leader or command the whole army, the choice is yours.";
@@ -48,12 +48,12 @@ class CfgFunctions
 {
 	#include "VAS\cfgfunctions.hpp"
 	#include "CHVD\CfgFunctions.hpp"
-	// #include "ais_injury\cfgFunctionsAIS.hpp" //Disabled AIS Injury, was causing bugs when the Longbow chopper got shot down 
+	#include "ais_injury\cfgFunctionsAIS.hpp" 
 	#include "EPD\EPDcfgFunctions.hpp"
 };
 
 // VAS INIT END --
 
 class RscTitles {
-	// #include "ais_injury\dialogs\rscTitlesAIS.hpp" //Disabled AIS Injury
+	#include "ais_injury\dialogs\rscTitlesAIS.hpp"
 };

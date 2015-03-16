@@ -6,7 +6,7 @@
 
 tcb_ais_revive_guaranty			=	true;			//	set to true for a 100% revive chance. False, and the unit got a 50/50 chance to fall in agony or die immediately. Attention: Take note of the settings for "tcb_ais_realistic_mode"!
 tcb_ais_realistic_mode			=	false;			//	set to true and units will die if they take a headshot or a heavy explosion nearby. Attention: if set to true, the revive chance guaranty are disabled!
-tcb_ais_medical_education		=	0;				//	Who can revive a concious unit?	0 == everybody		1 == everybody with a firstaid or medikit		2 == only medics 	(affect both, AI and players!)
+tcb_ais_medical_education		=	0;			//	Who can revive a concious unit?	0 == everybody		1 == everybody with a firstaid or medikit		2 == only medics 	(affect both, AI and players!)
 
 
 

@@ -51,14 +51,14 @@ if (Warcom_Limiter_Param == 1) then
 }
 else
 {
-  index_amount_zones_20 = lbAdd [2102, "20"];
-  index_amount_zones_19 = lbAdd [2102, "19"];
-  index_amount_zones_18 = lbAdd [2102, "18"];
-  index_amount_zones_17 = lbAdd [2102, "17"];
-  index_amount_zones_16 = lbAdd [2102, "16"];
-  index_amount_zones_15 = lbAdd [2102, "15"];
-  index_amount_zones_14 = lbAdd [2102, "14"];
-  index_amount_zones_13 = lbAdd [2102, "13"];
+  //index_amount_zones_20 = lbAdd [2102, "20"]; //Disabling these for now
+  //index_amount_zones_19 = lbAdd [2102, "19"];
+  //index_amount_zones_18 = lbAdd [2102, "18"];
+  //index_amount_zones_17 = lbAdd [2102, "17"];
+  //index_amount_zones_16 = lbAdd [2102, "16"];
+  //index_amount_zones_15 = lbAdd [2102, "15"];
+  //index_amount_zones_14 = lbAdd [2102, "14"];
+  //index_amount_zones_13 = lbAdd [2102, "13"];
   index_amount_zones_12 = lbAdd [2102, "12"];
   index_amount_zones_11 = lbAdd [2102, "11"];
   index_amount_zones_10 = lbAdd [2102, "10"];
@@ -132,15 +132,15 @@ lbSetCurSel [2106, index_weather_type_tropical];
 // AI OPF SKILL
 index_op_skill_elite = lbAdd [2107, "Elite (0.80-1.0)"];
 index_op_skill_commando = lbAdd [2107, "Commando (0.45-0.65)"];
-index_op_skill_veteran = lbAdd [2107, "Veteran (0.35-0.45)-default"];
+index_op_skill_veteran = lbAdd [2107, "Veteran (0.35-0.45) default"];
 index_op_skill_trained = lbAdd [2107, "Trained (0.25-0.35)"];
 index_op_skill_rookie = lbAdd [2107, "Rookie (0.15-0.25)"];
 lbSetCurSel [2107, index_op_skill_veteran];
 
 // AI BLU SKILL
-index_blu_skill_elite = lbAdd [2108, "Elite (0.90-1.0)-default"];
+index_blu_skill_elite = lbAdd [2108, "Elite (0.90-1.0)"];
 index_blu_skill_commando = lbAdd [2108, "Commando (0.45-0.65)"];
-index_blu_skill_veteran = lbAdd [2108, "Veteran (0.35-.45)"];
+index_blu_skill_veteran = lbAdd [2108, "Veteran (0.35-.45) default"];
 index_blu_skill_trained = lbAdd [2108, "Trained (0.25-0.35)"];
 index_blu_skill_rookie = lbAdd [2108, "Rookie (0.15-0.25)"];
 lbSetCurSel [2108, index_blu_skill_veteran];
@@ -151,9 +151,9 @@ index_chopper_travel_true = lbAdd [2109, "Yes"];
 lbSetCurSel [2109, index_chopper_travel_false];
 
 // FAST TRAVEL
-index_fast_travel_true = lbAdd [2714, "Yes (default)"];
-index_fast_travel_false = lbAdd [2714, "No"];
-lbSetCurSel [2714, index_fast_travel_true];
+index_fast_travel_true = lbAdd [2714, "Yes"];
+index_fast_travel_false = lbAdd [2714, "No (default)"];
+lbSetCurSel [2714, index_fast_travel_false];
 
 // MAX DISTANCE FROM HQ
 index_max_dist_hq_20 = lbAdd [2188, "2.0 km - for smallest maps"];

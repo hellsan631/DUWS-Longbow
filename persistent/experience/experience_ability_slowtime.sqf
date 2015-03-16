@@ -1,5 +1,5 @@
 // Cooldown les variables
-_cooldown = 300;
+_cooldown = 600;
 _ability_name = "Quick Reflexes";
 _varname = "skill_activate_slowmo";
 _radio = "BRAVO";
@@ -28,7 +28,7 @@ deleteVehicle _trg;
     titleText [format["%1 activated",_ability_name], "PLAIN DOWN"];
     /// -----   ABILITY IS ACTIVATED
     setacctime 0.3;
-    sleep 4;
+    sleep 10;
     setacctime 1;
     /// ----   ABILITY IS ACTIVATED
     titleText [format["%1 deactivated\nCooldown: %2 seconds",_ability_name,_cooldown], "PLAIN DOWN"];

@@ -1,0 +1,50 @@
+DUWS Longbow is Emton's modification of Modified DUWS Unofficial, original DUWS mission by kibot, Modified DUWS by BigShot and DUWS Unofficial by rlex, SATCOM script by Pixel Art Studio. The main goals of DUWS Longbow are polish, balance, bug fixes and whatever features are easy enough to add. My scripting skills are fairly primitive so if you can help let me know. Here's the changes so far:
+
+1.1: 
+
+Restored the Field Comm ability but now it's on the supports menu instead of the actionmenu and has a 60 second cooldown. Increased the duration of Quick Reflexes from 4 seconds to 10 seconds, increased the cooldown to 10 minutes from 5. Reduced the cooldown of Field Repair to 40 minutes from 1 hour. Reduced logistic ability cooldown to 10 minutes from 20. Increased warrior ability detect radius to 100m from 50m, decreased the cooldown to 10 minutes from 20. I feel these are balance changes to make the abilities more useful.
+
+Enabled AIS Injury but have revive disabled in params.hpp so this should still work with the Longbow.
+
+Increased zones_max_dist_from_hq in INIT.sqf to 50000 from 7500. Was this limiting the distance? After increasing this and using max distance of 50km in the start settings now the zones seem to spawn farther away like they should.
+
+Other tweaks.
+
+1.0:
+
+Added AH-64D Apache Longbow by Nodunit and Franze to the vehicles list, is not required to play. If you fly the Longbow be sure to use the regular key for switching weapons (usually F) instead of the custom WAS control. The problem was after using vehicle refit the WAS would no longer cycle through the weapons properly. Game saving was working pretty good in single player however the Longbow is in a early state for Arma 3 so you might get a bug where you can't start the IHADSS after you're wrecked the chopper and bought a new one.
+
+Disabled AIS Injury to prevent a bug, when the Longbow got shot down the player and the gunner would be ejected from the chopper and the gunner (probably any squad units) would get removed from your squad, you could no longer add units to your squad and even after reloading a previous save the problem would persist. I don't know if it's a problem with any aircraft and AIS Injury or just the Longbow. If you want AIS Injury open description.sqf and remove the "//" comment marks from the 2 lines with AIS Injury.
+
+Reworked AP and Warcom. I made the AP more of a consistent scale: 0, 25, 50, 75, 100, 150, 200, 250, 300. I also adjusted the AP requirements for when attack and patrol waves get sent. Now an attack wave will come 10 points before one of the AP settings and a patrol wave will come 10 points after one of the AP settings (also at 0). So when you get to 15 AP there should be an attack wave and when you get to 35 there should be a patrol wave and so forth. I also added additional unit types to the higher AP settings. When you hit 190 AP you'll be met with Mechanized AA Infantry, 240 AP sends Tank Section, 290 AP brings you an AA Tank Platoon. Same for BLUFOR counterparts.
+
+Lowered times between attack waves. Basically wherever I saw a 900 I made it 600. This gets you attack waves about every 10 - 20 mins instead of 15 -30.
+
+Lowered time for CP gain. Now you get CP every 20 mins. Added CP multipliers 3x and 4x.
+
+Tweaked the view for the SATCOM, hid lines, got rid of the colors, increased the mousewheel zooming speed, adjusted the text boxes (for me they were off). Wanted to make all the text white but couldn't seem to change it so off-white will have to do.
+
+Adjusted the order of actionmenu items, got rid of most colors.
+
+Increased the distance which you can place a FOB from the center of the zone to 350m, up from 250m. So you have more available placement area for finding a good defensive location. Note: I'm not sure what would happen if you placed the FOB ouside a 250m zone but probably nothing or it just wouldn't allow you.
+
+Vehicle refits allowed up to 100m from the base, up from 50m. 
+
+Removed the lighting from fortified FOBs because I didn't like my base being lit up at night.
+
+Changed the layout of the Main base request dialog, now you can see all the support unlocks without scrolling in a tiny window. Note: the request menus are stacked vertically, sometimes this can lead to misclick until you get used to it. If it's a big problem I might revert and readjust it again later.
+
+Tweaked some default start settings.
+
+Other small changes.
+
+Issues:
+
+SATCOM satellite view is not aligned to north making it less useful than it could be. I really really want the top of the screen aligned to north, I mean it should be simple just rotate that there camera view until it's pointing north. Also when viewing the satellite you hear sound from the position of the camera, you should only be hearing sound from the position of your player. Finally I would like the SATCOM to only activate once after selecting it on the action menu. As it is now after you activate it every time you click the map it takes you to satellite view even if you're away from base (I think until you activate a new ability), this also make interacting with units on the map difficult. So either activating SATCOM should get you 1 use each time OR there is a timer after exiting satellite view of 5 seconds during which you can choose a new coordinate, after 5 seconds SATCOM will deactivate and you will have to reactivate on the action menu.
+
+These are the main issues I have, I'd like to have a well polished DUWS so if you can help with these let me know. I got other crazy ideas too so if you're good at scripting maybe we can meld our brains together to form a supercomputing intelligence to craft the most ultimate version of DUWS on the planet. Let me know if you find any issues with this version or anything I've overlooked, thanks.
+
+Ideas:
+
+I had a new idea I see there is Patrol waves and Attack waves, there could also be Skirmish waves, these could be unarmed vehicles carrying increasingly dangerous infantry at higher AP levels that get sent to the last captured zone (or home base if no zone been captured). They should be smart enough to approach the edge of a zone and then dismount and send the troops into the zone.
+
