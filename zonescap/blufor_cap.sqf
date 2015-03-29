@@ -4,7 +4,6 @@ _markername = _this select 2;
 _markername2 = _this select 3;
 _triggerPos = _this select 4;
 
-
 amount_zones_captured = amount_zones_captured + 1;
 [["us_takencontrol",[_place]],"bis_fnc_showNotification"] call BIS_fnc_MP;
 
@@ -56,6 +55,7 @@ publicVariable "commandpointsblu1";
 // RECALL VARNAME FOR ZONE TRIGGER --> use the pos of the trigger
 private "_trg";
 call compile format["_trg = trigger%1%2",round (_triggerPos select 0),round (_triggerPos select 1)];
+
 //// MAKE THE TRIGGER CAPTURABLE FOR OPFOR
 _trg setTriggerActivation["EAST SEIZED","PRESENT",true];
 _trg setTriggerStatements["this", format["[""%1"",%2,""%3"",""%4"",%5] execvm 'zonescap\opfor_cap.sqf'",_place,_points,_markername,_markername2,_triggerPos], ""];

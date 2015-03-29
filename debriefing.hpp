@@ -13,7 +13,7 @@ class CfgDebriefing
 	{
 		title = "HQ Officer Killed!";
 		subtitle = "";
-		description = "Your commanding officer has been killed, you are now alone, stranded and waiting for an evac.";
+		description = "Your commanding officer has been killed. You are now alone, stranded and waiting for an evac.";
 		pictureBackground = "";
 		picture = "\a3\ui_f\data\gui\cfg\hints\ActionMenu_ca.paa";
 		pictureColor[] = {1,0,0,1};

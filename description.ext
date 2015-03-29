@@ -1,5 +1,5 @@
 OnLoadMission = "A dynamically generated campaign where you earn resources, execute missions and lead the BLUFOR to victory!";
-onLoadName = "DUWS Longbow 1.1";
+onLoadName = "DUWS Longbow 1.2";
 dev = "dev";
 author = "Kibot / BigShot / rlex / Emton";
 overviewText = "A dynamically generated campaign featuring the AH-64D Apache Longbow by Nodunit and Franze. Earn resources, execute missions and lead the BLUFOR forces to eradicate the OPFOR and win the war. Play however you want: Be a spec ops, a squad leader or command the whole army, the choice is yours.";

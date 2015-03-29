@@ -50,48 +50,50 @@ if (!(_return)) then
 		//case 17://W
 		case (({_x in _pressedButtonArray} count (actionKeys "MoveForward")) > 0):
 		{
-			PXS_SatelliteNorthMovementDelta = 2.5;
-			PXS_SatelliteTarget setPos [((getPos PXS_SatelliteTarget) select 0) - PXS_SatelliteNorthMovementDelta,((getPos PXS_SatelliteTarget) select 1) + PXS_SatelliteNorthMovementDelta,(getPos PXS_SatelliteTarget) select 2];
+			PXS_SatelliteNorthMovementDelta = 8;
+			PXS_SatelliteTarget setPos [((getPos PXS_SatelliteTarget) select 0),((getPos PXS_SatelliteTarget) select 1) + PXS_SatelliteNorthMovementDelta,(getPos PXS_SatelliteTarget) select 2];
 			call PXS_updateCamera;
 		};
 		//case 31://S
 		case (({_x in _pressedButtonArray} count (actionKeys "MoveBack")) > 0):
 		{
-			PXS_SatelliteSouthMovementDelta = 2.5;
-			PXS_SatelliteTarget setPos [((getPos PXS_SatelliteTarget) select 0) + PXS_SatelliteSouthMovementDelta,((getPos PXS_SatelliteTarget) select 1) - PXS_SatelliteSouthMovementDelta,(getPos PXS_SatelliteTarget) select 2];
+			PXS_SatelliteSouthMovementDelta = 8;
+			PXS_SatelliteTarget setPos [((getPos PXS_SatelliteTarget) select 0),((getPos PXS_SatelliteTarget) select 1) - PXS_SatelliteSouthMovementDelta,(getPos PXS_SatelliteTarget) select 2];
 			call PXS_updateCamera;
 		};
 		//case 30://A
 		case (({_x in _pressedButtonArray} count (actionKeys "TurnLeft")) > 0):
 		{
-			PXS_SatelliteWestMovementDelta = 2.5;
-			PXS_SatelliteTarget setPos [((getPos PXS_SatelliteTarget) select 0) - PXS_SatelliteWestMovementDelta,((getPos PXS_SatelliteTarget) select 1) - PXS_SatelliteWestMovementDelta,(getPos PXS_SatelliteTarget) select 2];
+			PXS_SatelliteWestMovementDelta = 8;
+			PXS_SatelliteTarget setPos [((getPos PXS_SatelliteTarget) select 0) - PXS_SatelliteWestMovementDelta,((getPos PXS_SatelliteTarget) select 1),(getPos PXS_SatelliteTarget) select 2];
 			call PXS_updateCamera;
 		};
 		//case 32://D
 		case (({_x in _pressedButtonArray} count (actionKeys "TurnRight")) > 0):
 		{
-			PXS_SatelliteEastMovementDelta = 2.5;
-			PXS_SatelliteTarget setPos [((getPos PXS_SatelliteTarget) select 0) + PXS_SatelliteEastMovementDelta,((getPos PXS_SatelliteTarget) select 1) + PXS_SatelliteEastMovementDelta,(getPos PXS_SatelliteTarget) select 2];
+			PXS_SatelliteEastMovementDelta = 8;
+			PXS_SatelliteTarget setPos [((getPos PXS_SatelliteTarget) select 0) + PXS_SatelliteEastMovementDelta,((getPos PXS_SatelliteTarget) select 1),(getPos PXS_SatelliteTarget) select 2];
 			call PXS_updateCamera;
 		};
 		//case 78://Num +
 		case ((({_x in _pressedButtonArray} count (actionKeys "ZoomIn")) > 0) || (({_x in _pressedButtonArray} count (actionKeys "MoveDown")) > 0)):
 		{
-			if ((PXS_SatelliteZoom + (0.02 * FACTOR)) <= 47) then
+			if ((PXS_SatelliteFOV) >= 0.011) then
 			{
-				PXS_SatelliteFOV = PXS_SatelliteFOV - (0.0005 * FACTOR);
-				PXS_SatelliteZoom = PXS_SatelliteZoom + (0.02 * FACTOR);
+				PXS_SatelliteFOV = PXS_SatelliteFOV * (0.8);
+				//PXS_SatelliteFOV = PXS_SatelliteFOV - (0.0005 * FACTOR);
+				//PXS_SatelliteZoom = PXS_SatelliteZoom + (0.02 * FACTOR);
 				call PXS_updateCamera;
 			};
 		};
 		//case 74://Num -
 		case ((({_x in _pressedButtonArray} count (actionKeys "ZoomOut")) > 0) || (({_x in _pressedButtonArray} count (actionKeys "MoveUp")) > 0)):
 		{
-			if ((PXS_SatelliteZoom - (0.02 * FACTOR)) >= 0.1) then
+			if ((PXS_SatelliteFOV) < 8) then
 			{
-				PXS_SatelliteFOV = PXS_SatelliteFOV + (0.0005 * FACTOR);
-				PXS_SatelliteZoom = PXS_SatelliteZoom - (0.02 * FACTOR);
+				PXS_SatelliteFOV = PXS_SatelliteFOV * (1.0/0.8);
+				//PXS_SatelliteFOV = PXS_SatelliteFOV + (0.0005 * FACTOR);
+				//PXS_SatelliteZoom = PXS_SatelliteZoom - (0.02 * FACTOR);
 				call PXS_updateCamera;
 			};
 		};

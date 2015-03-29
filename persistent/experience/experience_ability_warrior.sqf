@@ -35,7 +35,7 @@ deleteVehicle _trg;
             _trgplayer setTriggerStatements["this", "", ""];
             sleep 1;
             
-            _duration = 60;
+            _duration = 40;
             while {_duration >=0} do {
                  _trgplayer setpos getpos player;
                  _ennemies = list _trgplayer;
@@ -49,7 +49,7 @@ deleteVehicle _trg;
                     };
                     
                   _duration = _duration - 1;
-                  sleep 1;
+                  sleep 3;
 
                  };
             deleteVehicle _trgplayer;

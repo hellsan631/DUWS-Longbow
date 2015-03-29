@@ -40,7 +40,6 @@ str(_markername) setMarkerColor "ColorRed";
 // MODIFY MARKER ELLIPSE
 str(_markername2) setMarkerColor "ColorRed";
 
-
 // RECALL VARNAME FOR ZONE TRIGGER --> use the pos of the trigger
 private "_trg";
 call compile format["_trg = trigger%1%2",round (_triggerPos select 0),round (_triggerPos select 1)];

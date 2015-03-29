@@ -38,8 +38,6 @@ str(_markername2) setMarkerColor "ColorRed";
 str(_markername2) setMarkerSize [_size, _size];
 str(_markername2) setMarkerAlpha 0.1;
 
-
-
 // CREATE ZONE CAPTURABLE TRIGGER
 _trg=createTrigger["EmptyDetector",_trigger];
 _trg setTriggerArea[_size,_size,0,false];
@@ -47,17 +45,10 @@ _trg setTriggerActivation["WEST SEIZED","PRESENT",false];
 //_trg setTriggerActivation["WEST","PRESENT",false];
 _trg setTriggerStatements["this", format["[""%1"",%2,""%3"",""%4"",%5] execvm 'captured.sqf'",_place,_points,_markername,_markername2,_trigger], ""];
 _trg setTriggerTimeout [30, 60, 300, true ];
+
 // CREATE VARNAME FOR ZONE TRIGGER --> use the pos of the trigger
 _triggerName = format["trigger%1%2",round (_trigger select 0),round (_trigger select 1)];
 call compile format["%1 = _trg",_triggerName];
-
-
-
-
-
-
-
-
 
 // CREATE PREFAB
 if (_prefab) then {
@@ -86,8 +77,6 @@ _prefab_create = [_trigger] execVM _path;
 str(_markername) setMarkerText _place;
 };
 
-
-
 // CREATE ZONE NOTIFICATION TRIGGER
 _trg2=createTrigger["EmptyDetector",_trigger];
 _trg2 triggerAttachVehicle [player];
@@ -95,12 +84,9 @@ _trg2 setTriggerArea[_size,_size,0,false];
 _trg2 setTriggerActivation["VEHICLE","PRESENT",true];
 _trg2 setTriggerStatements["this", format["[""%1"",thislist] execvm 'enterlocation.sqf'",_place], ""];
 
-
-
 // move the spawn location, or units get stuck
 _fortifiedspawn = _trigger;
 _trigger = [(_trigger select 0)-40,_trigger select 1];
-
 
 // CREATE OPFOR. HEAVY CLUSTERFUCK INCOMING.
 // Check if fortified is true
@@ -118,6 +104,7 @@ if (_size < 101) exitWith
       _handle = [_trigger, _size] execvm "createoppatrol.sqf";
       waituntil {scriptdone _handle};
 };
+
 // Check if radius is 250m-100m => create 2 patrols and 1 fireteam then exit the script/500/8
 if (_size < 251) exitWith
 {

@@ -4,7 +4,6 @@ _markername = _this select 2;
 _markername2 = _this select 3;
 _triggerPos = _this select 4;
 
-
 amount_zones_captured = amount_zones_captured + 1;
 publicVariable "amount_zones_captured";
 [["us_takencontrol",[_place]],"bis_fnc_showNotification"] call BIS_fnc_MP;
@@ -58,7 +57,6 @@ str(_markername2) setMarkerColor "ColorGreen";
 sleep 2;
 
 ["cpadded",[_points]] call bis_fnc_showNotification;
-
 
 private "_trg";
 // RECALL VARNAME FOR ZONE TRIGGER --> use the pos of the trigger

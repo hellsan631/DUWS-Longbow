@@ -1,5 +1,11 @@
 DUWS Longbow is Emton's modification of Modified DUWS Unofficial, original DUWS mission by kibot, Modified DUWS by BigShot and DUWS Unofficial by rlex, SATCOM script by Pixel Art Studio. The main goals of DUWS Longbow are polish, balance, bug fixes and whatever features are easy enough to add. My scripting skills are fairly primitive so if you can help let me know. Here's the changes so far:
 
+1.2:
+
+Thanks to Coding on the BI forums the SATCOM view is now aligned to North, so now you can actually make sense of the view, position and movement of troops. Also the movement speed has been increased.
+
+Adjusted the slowtime/quick reflexes ability so now it gradually transitions back to normal. Also the effect is stronger when it starts; .1 accel for 1 second (equals 10 seconds) transitioning to .2 accel for 2 seconds, .3 accel for 3 seconds etc up to .9 for 9 seconds. In total the effect lasts for around 45 - 60 seconds or so.
+
 1.1: 
 
 Restored the Field Comm ability but now it's on the supports menu instead of the actionmenu and has a 60 second cooldown. Increased the duration of Quick Reflexes from 4 seconds to 10 seconds, increased the cooldown to 10 minutes from 5. Reduced the cooldown of Field Repair to 40 minutes from 1 hour. Reduced logistic ability cooldown to 10 minutes from 20. Increased warrior ability detect radius to 100m from 50m, decreased the cooldown to 10 minutes from 20. I feel these are balance changes to make the abilities more useful.

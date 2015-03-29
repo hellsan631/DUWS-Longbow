@@ -20,22 +20,22 @@
           ["new_ability",["New ability: Field Surgery","You are really hard to kill, you know that ?"]] call bis_fnc_showNotification;
           player createDiaryRecord ["abilities_info", ["Field Surgery", "<font color='#FF0000'>Cooldown: 20 minutes</font color><br/>Description:<br/>When activated through the radio menu, you will be fully healed after a short period of time"]];
           
-		 waitUntil {sleep 2; experience_total>=30};          
+		 waitUntil {sleep 2; experience_total>=35};          
           _handle = [player] execVM "persistent\experience\experience_ability_fieldcomm.sqf"; 
           ["new_ability",["New ability: Field Commander","Leading the way"]] call bis_fnc_showNotification;
           player createDiaryRecord ["abilities_info", ["Field Commander", "<font color='#FF0000'>Cooldown: N/A</font color><br/>Description:<br/>You can now access the squad manager in the field."]];
                       
-          waitUntil {sleep 2; experience_total>=35};          
+          waitUntil {sleep 2; experience_total>=45};          
           _handle = [player] execVM "persistent\experience\experience_ability_warrior.sqf"; 
           ["new_ability",["New ability: Veteran Instinct","I think I saw someone around this corner..."]] call bis_fnc_showNotification;
-          player createDiaryRecord ["abilities_info", ["Veteran Instinct", "<font color='#FF0000'>Cooldown: 10 minutes</font color><br/>Description:<br/>When activated through the radio menu, for 60 seconds you will know if the zone in a radius of 100 meters around you is clear of enemies or not."]];
+          player createDiaryRecord ["abilities_info", ["Veteran Instinct", "<font color='#FF0000'>Cooldown: 10 minutes</font color><br/>Description:<br/>When activated through the radio menu, for 2 minutes you will know if the zone in a radius of 100 meters around you is clear of enemies or not."]];
           
-          waitUntil {sleep 2; experience_total>=45};          
+          waitUntil {sleep 2; experience_total>=55};          
           _handle = [player] execVM "persistent\experience\experience_ability_refit.sqf"; 
           ["new_ability",["New ability: Field Repair","Did someone say MacGyver ?"]] call bis_fnc_showNotification;
           player createDiaryRecord ["abilities_info", ["Field Repair", "<font color='#FF0000'>Cooldown: 40 minutes</font color><br/>Description:<br/>When activated through the radio menu, the vehicle you are inside will be repaired and some fuel added."]];
                     
-          waitUntil {sleep 2; experience_total>=55};          
+          waitUntil {sleep 2; experience_total>=65};          
           _handle = [player] execVM "persistent\experience\experience_ability_logistic.sqf"; 
           ["new_ability",["New ability: Logistic Support","They're sending lots of ressources your way"]] call bis_fnc_showNotification;
           player createDiaryRecord ["abilities_info", ["Logistic Support", "<font color='#FF0000'>Cooldown: 10 minutes (passive)</font color><br/>Description:<br/>This passive ability gives you +1 command point every 10 minutes."]];
