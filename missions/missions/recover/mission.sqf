@@ -38,7 +38,7 @@ str(_markername2) setMarkerSize [_radius, _radius];
 str(_markername2) setMarkerAlpha 0.3; 
 
 // CREATE MTV vehicle and give it a name with public variable
-_mtv1 = "I_MRAP_03_F" createVehicle (_missionpos);
+_mtv1 = "I_MRAP_03_hmg_F" createVehicle (_missionpos);
 _Varname = "MTV1";
 _mtv1 SetVehicleVarName _VarName;
 _mtv1 Call Compile Format ["%1=_This ; PublicVariable ""%1""",_VarName];
